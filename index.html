@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=1400">
+    <title>Document</title>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+    
+        $('.tab .tabs a').on('click',function(){ // 탭메뉴에 있는 링크를 클릭했을때
+            var idx = $(this).parent().index(); // 현재 클릭한 링크의 부모가 몇번째 인지 idx 변수에 넣는다.
+    
+            $(this).parent().siblings().removeClass('on'); // 현재 클릭한 링크의 부모를 제외 한 나머지 li에 on클래스를 제거하고
+            $(this).parent().addClass('on'); // 현재 클릭한 링크의 부모 li에 on클래스 넣는다.
+    
+            $(this).parent().parent().siblings('.tab_con').removeClass('on');
+            // 현재 클릭한 부모 li의 부모 ul을 제외한 나머지 클래스 .tab_con에 클래스 on을 지워준다.
+    
+            $(this).parent().parent().siblings('.tab_con').eq(idx).addClass('on');
+            // 현재 클릭한 부모 li의 부모 ul을 제외한 나머지 클래스 .tab_con을 선택하고 그중 eq번째에 클래스 on을 넣는다.
+    
+        });
+        
+    });
+    
+    </script>
+
+
+
+    <link rel="stylesheet" href="sub3style.css">
+    <link href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/variable/woff2/SUIT-Variable.css" rel="stylesheet">
+</head>
+<body>
+    
+<div id="header">
+  
+    <a href="#" class="logo">
+        <img src="images/mainlogo.png" alt="로고"></a>
+    
+        
+
+        <ul class="nav">
+            <li><a href="https://jiwonchoi1026.github.io/hugme_sub1/">허그미 소개</a></li>
+            <li><a href="https://jiwonchoi1026.github.io/hugme_sub2/">프로그램</a></li>
+           
+            <li><a href="https://jiwonchoi1026.github.io/hugme_sub3/">이벤트</a></li>
+            <li><a href="https://jiwonchoi1026.github.io/hugme_sub4/">커뮤니티</a></li>
+        </ul>
+    </div><!--header f-->
+
+
+    <div id="banner"><!--banner s-->
+        <a href="#eventintro">
+          <img src="images/sub3mb.jpg" alt="구독버튼"></a>
+      </div><!--banner f-->
+
+  
+    <div id="eventintro"><!--eventintro s-->
+        <div class="eventintro_inner"><!--eventintro_inner s-->
+            <h1 class="iconevent">&nbsp;&nbsp;&nbsp;&nbsp;<!---->이벤트</h1>
+
+
+
+            <div class="tab"><!--리베 tap s-->
+          <ul class="tabs type1"><!--menubox였던-->
+                <li><a href="#none">
+                  <p class="big">&nbsp;&nbsp;&nbsp;전체&nbsp;&nbsp;&nbsp;</p>
+                </a></li>
+                <li><a href="#none">
+                  <p class="big">구독혜택</p>
+                </a></li>
+                <li><a href="#none">
+                  <p class="big">제휴혜택</p>
+                </a></li 잠시-->
+            </ul>
+
+            <div class="tab_con on">   <!--tab1 전체내용 s-->
+                <div id="event6"><!--event6 s-->
+                    <!--div id="event_1"    event_1 s 새로-->
+                        <div class="event6_inner1">
+                         
+                            <ul class="event12">
+                                <li><a href="#">
+                                    <img src="images/e1.jpg" alt="짤1">
+                                    <br><br>
+                                    <p class="big">허그미 신규가입 이벤트</p>
+                                    <p class="gray">2022.07 ~ 상시</p>
+                                    <br><br>
+                                </a></li>
+                                <li class="margin"><a href="#">
+                                    <img src="images/e2.jpg" alt="짤2">
+                                    <br><br>
+                                    <p class="big">카카오페이 결제시 포인트 적립</p>
+                                    <p class="gray">2022.07 ~ 제휴기간 내</p>
+                                    <br><br>
+                                </a></li>
+                             
+                            </ul>   
+                        </div>
+                    <!--/div    event_1 f-->
+            
+                    <!--div id="event_2" event_2 s 새로-->            
+                        <div class="event6_inner2">
+                            <ul class="event12">
+                                <li><a href="#"><div id="event_2"><!----> 
+                                    <img src="images/e3.jpg" alt="짤3">
+                                    <br><br>
+                                    <p class="big">허그미 얼리버드 월 구독권</p>
+                                    <p class="gray">2022.07.10 ~ 2022.12.31</p>
+                                <br><br>
+                                </div><!----></a></li>
+                                <li class="margin"><a href="#">
+                                    <img src="images/e4.jpg" alt="짤4">
+                                    <br><br>
+                                    <p class="big">허그미 x 알라딘 콜라보 이벤트</p>
+                                    <p class="gray">2022.07.10 ~ 2022.10.31</p>
+                                    <br><br>
+                                </a></li>
+                            </ul>   
+                        
+                        </div>
+                     <!--/div    event_2 f-->
+            
+                        
+                    <!--div id="event_3"    event_3 s 새로-->            
+                        <div class="event6_inner3">
+                         
+                            <ul class="event12">
+                                <li><a href="#"><div id="event_3"><!----> 
+                                    <img src="images/e5.jpg" alt="짤1">
+                                    <br><br>
+                                    <p class="big">구독자 셀프케어 프로그램 체험권 증정</p>
+                                    <p class="gray">2022.07.15 ~ 월 구독권 구매 후 2달 내</p>
+                                    <br><br>
+                                </div><!----> </a></li>
+                                <li class="margin"><a href="#">
+                                    <img src="images/e6.jpg" alt="짤2">
+                                    <br><br>
+                                    <p class="big">셀프케어 프로그램 리뷰 작성시 포인트 적립</p>
+                                    <p class="gray">2022.07.01 ~ 상시</p>
+                                    <br><br>
+                                </a></li>
+                             
+                            </ul>   
+                        </div>
+                    <!--/div-event_3 f 새로-->    
+            </div><!--event6 f-->            
+<div><!--list s-->
+    <ul class="list">
+        <li><a href="#"><img src="images/00.jpg" alt="00"></a></li>
+        <li><a href="#"><img src="images/0.jpg" alt="0"></a></li>
+        <li class="limargin">
+            <a href="#"><img src="images/1.jpg" alt="1"></a></li>
+        <li><a href="#"><img src="images/2.jpg" alt="2"></a></li>
+        <li><a href="#"><img src="images/3.jpg" alt="3"></a></li>
+    </ul>
+</div><!--list f-->
+</div><!--tab1 전체내용 f-->
+
+            <div class="tab_con"><!--tab2 구독혜택 내용 s-->
+                <div id="event66"><!--event6 s-->
+                    <!--div id="event_1"    event_1 s 새로-->
+                        <div class="event6_inner1">
+                         
+                            <ul class="event12">
+                                <li><a href="#"><div id="event_2"><!----> 
+                                    <img src="images/e3.jpg" alt="짤3">
+                                    <br><br>
+                                    <p class="big">허그미 얼리버드 월 구독권</p>
+                                    <p class="gray">2022.07.10 ~ 2022.12.31</p>
+                                <br><br>
+                                </div><!----></a></li>
+                                <li class="margin"><a href="#"><div id="event_3"><!----> 
+                                    <img src="images/e5.jpg" alt="짤1">
+                                    <br><br>
+                                    <p class="big">구독자 셀프케어 프로그램 체험권 증정</p>
+                                    <p class="gray">2022.07.15 ~ 월 구독권 구매 후 2달 내</p>
+                                    <br><br>
+                                </div><!----> </a></li>
+                             
+                            </ul>   
+                        </div>
+                    <!--/div    event_1 f-->
+            
+                   
+            </div><!--event6 f-->            
+<div><!--list2 s-->
+    <ul class="list">
+        <li><a href="#"><img src="images/00.jpg" alt="00"></a></li>
+        <li><a href="#"><img src="images/0.jpg" alt="0"></a></li>
+        <li class="limargin">
+            <a href="#"><img src="images/1.jpg" alt="1"></a></li>
+        <li><a href="#"><img src="images/2.jpg" alt="2"></a></li>
+        <li><a href="#"><img src="images/3.jpg" alt="3"></a></li>
+    </ul>
+</div><!--list2 f-->
+</div><!-- tab2 구독혜택 내용 f-->
+            <div class="tab_con"><!--tab3 제휴혜택 내용 s-->
+                <div id="event66"><!--event6 s-->
+                    <!--div id="event_1"    event_1 s 새로-->
+                        <div class="event6_inner1">
+                         
+                            <ul class="event12">
+                                <li><a href="#">
+                                    <img src="images/e2.jpg" alt="짤2">
+                                    <br><br>
+                                    <p class="big">카카오페이 결제시 포인트 적립</p>
+                                    <p class="gray">2022.07 ~ 제휴기간 내</p>
+                                    <br><br>
+                                </a></li>
+                                <li class="margin"><a href="#">
+                                    <img src="images/e4.jpg" alt="짤4">
+                                    <br><br>
+                                    <p class="big">허그미 x 알라딘 콜라보 이벤트</p>
+                                    <p class="gray">2022.07.10 ~ 2022.10.31</p>
+                                    <br><br>
+                                </a></li>
+                             
+                            </ul>   
+                        </div>
+                    <!--/div    event_1 f-->
+            
+                   
+            </div><!--event6 f-->            
+<div><!--list3 s-->
+    <ul class="list">
+        <li><a href="#"><img src="images/00.jpg" alt="00"></a></li>
+        <li><a href="#"><img src="images/0.jpg" alt="0"></a></li>
+        <li class="limargin">
+            <a href="#"><img src="images/1.jpg" alt="1"></a></li>
+        <li><a href="#"><img src="images/2.jpg" alt="2"></a></li>
+        <li><a href="#"><img src="images/3.jpg" alt="3"></a></li>
+    </ul>
+</div><!--list3 f-->
+                
+</div><!--tab3 제휴혜택 내용 f-->
+</tab><!--리베 tap f-->
+</div><!--eventintro_inner f-->
+</div><!--eventintro f-->
+
+
+<div id="footer"><!--footer s-->
+    <div class="footer_inner"><!--footer_inner s-->
+        <div class="footertext">
+        <p>(주) 허그미 ㅣ 대표이사: 최지원</p>
+        <p>부산광역시 중구 중앙대로 26 ㅣ 051-123-4567</p>
+        <p>COPYRIGHT ⓒ HUGME ALL RIGHTS RESERVED</p>
+        </div>
+       
+        <div class="footerlogo">
+            <a href="#"><img src="images/mainlogo.png" alt="로고이미지"></a>
+        </div>
+    </div><!--footer_inner f-->
+</div><!--footer f-->
+
+
+
+
+</body>
+</html>
